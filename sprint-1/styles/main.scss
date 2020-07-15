@@ -1,0 +1,232 @@
+@import "./partials/variables";
+@import "./partials/mixins";
+@import "./partials/fonts";
+
+html,
+head,
+body {
+  box-sizing: border-box;
+  margin: -4;
+}
+
+*,
+*::before,
+*::after {
+  font-family: Avenir;
+  margin: inherit;
+  box-sizing: inherit;
+}
+
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: #323232;
+  color: #fafafa;
+  height: 80px;
+  @include tablet {
+    flex-direction: row;
+  }
+
+  img {
+    margin-bottom: auto;
+    margin-top: 16px;
+    @include tablet {
+      padding: 1rem;
+      margin-right: 6rem; //QUESTION: Why do I need to insert so much margin on the logo? Or else the list items overlap with the logo.
+    }
+    @include desktop {
+      padding-left: 180px;
+      padding-right: 56px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    @include tablet {
+      height: 100%;
+    }
+  }
+  li {
+    min-width: 50%;
+    text-align: center;
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: auto;
+      margin-right: 4vw;
+      margin-left: 4vw;
+    }
+  }
+
+  li:first-child {
+    border-bottom: 5px solid #fafafa;
+  }
+
+  li:nth-child(even) {
+    color: #afafaf;
+  }
+}
+
+.hero {
+  color: #ffffff;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5)),
+    url(../assets/Images/adrien-converse-xzH7K6nVVgI-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 183px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include tablet {
+    height: 400px;
+  }
+
+  h1 {
+    font-size: 60px;
+    line-height: 68px;
+    margin-left: 16px;
+    @include tablet {
+      margin-left: 24px;
+    }
+    @include desktop {
+      margin-left: 180px;
+    }
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    margin: 32px 16px 24px 16px;
+  }
+
+  &__img {
+    width: 288px;
+    height: 144px;
+    overflow: hidden;
+    object-fit: fill;
+    margin: 0px 16px 24px 16px;
+    @include tablet {
+      width: 720px;
+      height: 362px;
+    }
+  }
+
+  &__quote {
+    margin: 0px 16px 32px 16px;
+  }
+
+  h4 {
+    margin: 0px 16px 40px 16px;
+  }
+
+  h3 {
+    margin: 0px 16px 24px 16px;
+  }
+
+  &__paragraph-container {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+
+  p {
+    margin: 0px 16px 40px 16px;
+  }
+
+  //QUESTION: How do I make the space between the two paragraphs to be 24px?
+
+  // @include tablet {
+  //   p :nth-child(1) {
+  //     margin-right: 12px;
+  //   }
+  //   p :nth-child(2) {
+  //     margin-left: 12px;
+  //   }
+  // }
+}
+
+.photo-gallery {
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  h1 {
+    padding: 23px 16px 24px;
+  }
+
+  &__images {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    img {
+      margin: 12px auto;
+      width: 288px; //QUESTION: width 288 is smaller than screen width. Should I just center align the image?
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #323232;
+  color: #ffffff;
+  > * {
+    padding: 16px 16px;
+  }
+  &__top-section {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+
+  //QUESTION: Why are the icons stuck together? What am I forgetting..?
+
+  &__icon-container {
+    .footer__icons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &__middle-section {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+    }
+    div {
+      margin-right: 1.5rem;
+    }
+    //QUESTION: What would be the best way to create vertical spacing between the <h1> and <p> tags? Create further <div> tags>?
+  }
+
+  &__bottom-section {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+}
