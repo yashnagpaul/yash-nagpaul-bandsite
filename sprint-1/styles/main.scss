@@ -12,7 +12,7 @@ body {
 *,
 *::before,
 *::after {
-  font-family: Avenir;
+  font-family: "avenir-regular";
   margin: inherit;
   box-sizing: inherit;
 }
@@ -37,9 +37,10 @@ li {
   img {
     margin-bottom: auto;
     margin-top: 16px;
+    display: inline-block;
     @include tablet {
       padding: 1rem;
-      margin-right: 6rem; //QUESTION: Why do I need to insert so much margin on the logo? Or else the list items overlap with the logo.
+      margin-right: 56px; //QUESTION: Why is the logo overlapping with the list/items?
     }
     @include desktop {
       padding-left: 180px;
@@ -51,21 +52,23 @@ li {
     list-style: none;
     display: flex;
     justify-content: space-around;
+    width: 100%;
     @include tablet {
+      width: 25%;
       height: 100%;
     }
   }
   li {
-    min-width: 50%;
     text-align: center;
+    width: 50%;
+    padding-bottom: 2%;
     @include tablet {
       display: flex;
       align-items: center;
-      justify-content: center;
       height: 100%;
       width: auto;
-      margin-right: 4vw;
-      margin-left: 4vw;
+      margin-right: 2vw;
+      margin-left: 2vw;
     }
   }
 
@@ -92,6 +95,9 @@ li {
   @include tablet {
     height: 400px;
   }
+  @include desktop {
+    height: 670px;
+  }
 
   h1 {
     font-size: 60px;
@@ -111,76 +117,110 @@ li {
   flex-direction: column;
 
   h1 {
-    margin: 32px 16px 24px 16px;
-  }
+    padding-bottom: 5%;
+    margin-left: 3%;
+    font-family: "avenir-bold";
+    font-size: 36px;
+    line-height: 44px;
 
-  &__img {
-    width: 288px;
-    height: 144px;
-    overflow: hidden;
-    object-fit: fill;
-    margin: 0px 16px 24px 16px;
-    @include tablet {
-      width: 720px;
-      height: 362px;
+    @include desktop {
+      padding-left: 5%;
     }
   }
 
-  &__quote {
-    margin: 0px 16px 32px 16px;
-  }
+  &__container {
+    padding: 5%;
+    .main__img {
+      margin-bottom: 5%;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      @include tablet {
+      }
+      @include desktop {
+        padding-left: 15%;
+        padding-right: 15%;
+      }
+    }
 
-  h4 {
-    margin: 0px 16px 40px 16px;
-  }
+    .main__quote {
+      margin-bottom: 5%;
 
-  h3 {
-    margin: 0px 16px 24px 16px;
-  }
+      @include tablet {
+      }
+      @include desktop {
+        padding-left: 15%;
+        padding-right: 15%;
+      }
+    }
 
-  &__paragraph-container {
-    display: flex;
-    flex-direction: column;
-    @include tablet {
-      flex-direction: row;
+    h4 {
+      margin-bottom: 5%;
+
+      @include tablet {
+      }
+      @include desktop {
+        padding-left: 15%;
+        padding-right: 15%;
+      }
+    }
+
+    h3 {
+      margin-bottom: 5%;
+
+      @include tablet {
+      }
+      @include desktop {
+        padding-left: 15%;
+        padding-right: 15%;
+      }
+    }
+
+    .main__paragraph-container {
+      display: flex;
+      flex-direction: column;
+      @include tablet {
+        flex-direction: row;
+        #first-paragraph {
+          padding-right: 12px;
+        }
+        #second-paragraph {
+          padding-left: 12px;
+        }
+      }
+      @include desktop {
+        padding-left: 15%;
+        padding-right: 15%;
+      }
     }
   }
-
-  p {
-    margin: 0px 16px 40px 16px;
-  }
-
-  //QUESTION: How do I make the space between the two paragraphs to be 24px?
-
-  // @include tablet {
-  //   p :nth-child(1) {
-  //     margin-right: 12px;
-  //   }
-  //   p :nth-child(2) {
-  //     margin-left: 12px;
-  //   }
-  // }
 }
 
 .photo-gallery {
   background-color: #fafafa;
   display: flex;
   flex-direction: column;
+  padding: 1% 10%;
+
   h1 {
-    padding: 23px 16px 24px;
+    //insert styling if needed
   }
 
   &__images {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     @include tablet {
       flex-direction: row;
       flex-wrap: wrap;
     }
+    @include desktop {
+      // margin-left: 230px;
+      // margin-right: 230px;
+    }
     img {
-      margin: 12px auto;
-      width: 288px; //QUESTION: width 288 is smaller than screen width. Should I just center align the image?
+      margin: 1rem 0.5rem 1rem 0;
+      width: 25vw;
     }
   }
 }

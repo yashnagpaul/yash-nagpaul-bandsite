@@ -1,16 +1,16 @@
 @font-face {
   font-family: "avenir-bold";
-  src: url("../../assets/fonts/avenir-bold.otf");
+  src: url("../assets/fonts/avenir-bold.otf");
 }
 
 @font-face {
   font-family: "avenir-demi";
-  src: url("../../assets/fonts/avenir-demi.otf");
+  src: url("../assets/fonts/avenir-demi.otf");
 }
 
 @font-face {
   font-family: "avenir-regular";
-  src: url("../../assets/fonts/avenir-regular.otf");
+  src: url("../assets/fonts/avenir-regular.otf");
 }
 
 html,
@@ -24,7 +24,7 @@ body {
 *,
 *::before,
 *::after {
-  font-family: Avenir;
+  font-family: "avenir-regular";
   margin: inherit;
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
@@ -62,12 +62,13 @@ li {
 .header img {
   margin-bottom: auto;
   margin-top: 16px;
+  display: inline-block;
 }
 
 @media screen and (min-width: 768px) {
   .header img {
     padding: 1rem;
-    margin-right: 6rem;
+    margin-right: 56px;
   }
 }
 
@@ -85,17 +86,20 @@ li {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
   .header ul {
+    width: 25%;
     height: 100%;
   }
 }
 
 .header li {
-  min-width: 50%;
   text-align: center;
+  width: 50%;
+  padding-bottom: 2%;
 }
 
 @media screen and (min-width: 768px) {
@@ -106,13 +110,10 @@ li {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     height: 100%;
     width: auto;
-    margin-right: 4vw;
-    margin-left: 4vw;
+    margin-right: 2vw;
+    margin-left: 2vw;
   }
 }
 
@@ -150,6 +151,12 @@ li {
   }
 }
 
+@media screen and (min-width: 1440px) {
+  .hero {
+    height: 670px;
+  }
+}
+
 .hero h1 {
   font-size: 60px;
   line-height: 68px;
@@ -179,38 +186,72 @@ li {
 }
 
 .main h1 {
-  margin: 32px 16px 24px 16px;
+  padding-bottom: 5%;
+  margin-left: 3%;
+  font-family: "avenir-bold";
+  font-size: 36px;
+  line-height: 44px;
 }
 
-.main__img {
-  width: 288px;
-  height: 144px;
-  overflow: hidden;
-  -o-object-fit: fill;
-     object-fit: fill;
-  margin: 0px 16px 24px 16px;
-}
-
-@media screen and (min-width: 768px) {
-  .main__img {
-    width: 720px;
-    height: 362px;
+@media screen and (min-width: 1440px) {
+  .main h1 {
+    padding-left: 5%;
   }
 }
 
-.main__quote {
-  margin: 0px 16px 32px 16px;
+.main__container {
+  padding: 5%;
 }
 
-.main h4 {
-  margin: 0px 16px 40px 16px;
+.main__container .main__img {
+  margin-bottom: 5%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
-.main h3 {
-  margin: 0px 16px 24px 16px;
+@media screen and (min-width: 1440px) {
+  .main__container .main__img {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
 }
 
-.main__paragraph-container {
+.main__container .main__quote {
+  margin-bottom: 5%;
+}
+
+@media screen and (min-width: 1440px) {
+  .main__container .main__quote {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+
+.main__container h4 {
+  margin-bottom: 5%;
+}
+
+@media screen and (min-width: 1440px) {
+  .main__container h4 {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+
+.main__container h3 {
+  margin-bottom: 5%;
+}
+
+@media screen and (min-width: 1440px) {
+  .main__container h3 {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+
+.main__container .main__paragraph-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -221,16 +262,25 @@ li {
 }
 
 @media screen and (min-width: 768px) {
-  .main__paragraph-container {
+  .main__container .main__paragraph-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  .main__container .main__paragraph-container #first-paragraph {
+    padding-right: 12px;
+  }
+  .main__container .main__paragraph-container #second-paragraph {
+    padding-left: 12px;
+  }
 }
 
-.main p {
-  margin: 0px 16px 40px 16px;
+@media screen and (min-width: 1440px) {
+  .main__container .main__paragraph-container {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
 }
 
 .photo-gallery {
@@ -242,10 +292,7 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.photo-gallery h1 {
-  padding: 23px 16px 24px;
+  padding: 1% 10%;
 }
 
 .photo-gallery__images {
@@ -256,9 +303,9 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media screen and (min-width: 768px) {
@@ -273,8 +320,8 @@ li {
 }
 
 .photo-gallery__images img {
-  margin: 12px auto;
-  width: 288px;
+  margin: 1rem 0.5rem 1rem 0;
+  width: 25vw;
 }
 
 .footer {
