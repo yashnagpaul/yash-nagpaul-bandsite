@@ -37,6 +37,30 @@ li {
   padding: 0;
 }
 
+/* ============
+UTILITY CLASSES
+============ */
+.section-heading, .main__heading, .photo-gallery__heading, .footer__top-section .footer__heading {
+  font-size: 36px;
+  line-height: 44px;
+  font-family: "avenir-bold";
+}
+
+@media screen and (min-width: 768px) {
+  .section-padding {
+    padding: 2% 5%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .section-padding {
+    padding: 3% 10%;
+  }
+}
+
+/* ============
+- H E A D E R -
+============ */
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -69,13 +93,13 @@ li {
   .header img {
     padding: 1rem;
     margin-right: 56px;
+    margin-left: 5%;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .header img {
-    padding-left: 180px;
-    padding-right: 56px;
+    padding-left: 9%;
   }
 }
 
@@ -97,6 +121,7 @@ li {
 }
 
 .header li {
+  font-family: "avenir-demi";
   text-align: center;
   width: 50%;
   padding-bottom: 2%;
@@ -125,6 +150,9 @@ li {
   color: #afafaf;
 }
 
+/* =============
+- HERO SECTION -
+============= */
 .hero {
   color: #ffffff;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5))), url(../assets/Images/adrien-converse-xzH7K6nVVgI-unsplash.jpg);
@@ -158,6 +186,7 @@ li {
 }
 
 .hero h1 {
+  font-family: "avenir-bold";
   font-size: 60px;
   line-height: 68px;
   margin-left: 16px;
@@ -165,16 +194,19 @@ li {
 
 @media screen and (min-width: 768px) {
   .hero h1 {
-    margin-left: 24px;
+    margin-left: 5%;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .hero h1 {
-    margin-left: 180px;
+    margin-left: 13%;
   }
 }
 
+/* ===================
+MAIN BIOGRAPHY SECTION
+=================== */
 .main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -185,22 +217,19 @@ li {
           flex-direction: column;
 }
 
-.main h1 {
-  padding-bottom: 5%;
-  margin-left: 3%;
-  font-family: "avenir-bold";
-  font-size: 36px;
-  line-height: 44px;
+.main__heading {
+  padding-bottom: 3%;
 }
 
 @media screen and (min-width: 1440px) {
-  .main h1 {
-    padding-left: 5%;
+  .main__heading {
+    padding-bottom: 5%;
+    padding-left: 8%;
   }
 }
 
 .main__container {
-  padding: 5%;
+  padding: 5% 3%;
 }
 
 .main__container .main__img {
@@ -283,6 +312,9 @@ li {
   }
 }
 
+/* ==============
+- PHOTO GALLERY -
+============== */
 .photo-gallery {
   background-color: #fafafa;
   display: -webkit-box;
@@ -292,10 +324,16 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 1% 10%;
+  padding: 2% 3%;
 }
 
-.photo-gallery__images {
+@media screen and (min-width: 1440px) {
+  .photo-gallery {
+    padding: 2% 10%;
+  }
+}
+
+.photo-gallery__image-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -309,7 +347,7 @@ li {
 }
 
 @media screen and (min-width: 768px) {
-  .photo-gallery__images {
+  .photo-gallery__image-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -319,11 +357,26 @@ li {
   }
 }
 
-.photo-gallery__images img {
-  margin: 1rem 0.5rem 1rem 0;
-  width: 25vw;
+.photo-gallery__image-container img {
+  margin: 1.5rem 0 0;
+  width: 90vw;
 }
 
+@media screen and (min-width: 768px) {
+  .photo-gallery__image-container img {
+    width: 28.5vw;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .photo-gallery__image-container img {
+    width: 25vw;
+  }
+}
+
+/* ==============
+-  F O O T E R  -
+============== */
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -334,10 +387,22 @@ li {
           flex-direction: column;
   background-color: #323232;
   color: #ffffff;
+  padding: 2% 3%;
+  /* ===============================
+  HEADING + SOCIAL MEDIA + SITE LOGO
+  =============================== */
+  /* ================
+  3 DIVS FOR CONTACTS
+  ================ */
+  /* ============
+  COPYRIGHT INFO.
+  ============ */
 }
 
-.footer > * {
-  padding: 16px 16px;
+@media screen and (min-width: 1440px) {
+  .footer {
+    padding: 2% 10%;
+  }
 }
 
 .footer__top-section {
@@ -348,6 +413,8 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
+  margin-bottom: 1%;
 }
 
 @media screen and (min-width: 768px) {
@@ -359,7 +426,30 @@ li {
   }
 }
 
-.footer__icon-container .footer__icons {
+.footer__top-section .footer__heading {
+  margin-right: 5%;
+  margin-bottom: auto;
+}
+
+.footer__top-section .footer__icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__top-section .footer__icon-container {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+.footer__top-section .footer__icon-container .footer__icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -367,9 +457,25 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+}
+
+.footer__top-section .footer__icon-container .footer__icons img {
+  margin-right: 2rem;
+}
+
+.footer .footer__logo {
+  display: none;
+  position: absolute;
+  right: 0px;
+  top: 25%;
+}
+
+@media screen and (min-width: 768px) {
+  .footer .footer__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .footer__middle-section {
@@ -380,6 +486,7 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 1%;
 }
 
 @media screen and (min-width: 768px) {
@@ -392,7 +499,22 @@ li {
 }
 
 .footer__middle-section div {
-  margin-right: 1.5rem;
+  margin-right: 0.9rem;
+}
+
+@media screen and (min-width: 1440px) {
+  .footer__middle-section div {
+    margin-right: 1.8rem;
+  }
+}
+
+.footer__middle-section div .footer__contact-name-and-organization {
+  font-family: "avenir-demi";
+  margin-bottom: 5%;
+}
+
+.footer__middle-section div .footer__contact-regions {
+  margin-bottom: 5%;
 }
 
 .footer__bottom-section {

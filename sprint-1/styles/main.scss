@@ -24,6 +24,29 @@ li {
   padding: 0;
 }
 
+/* ============
+UTILITY CLASSES
+============ */
+
+.section-heading {
+  font-size: 36px;
+  line-height: 44px;
+  font-family: "avenir-bold";
+}
+
+.section-padding {
+  @include tablet {
+    padding: 2% 5%;
+  }
+  @include desktop {
+    padding: 3% 10%;
+  }
+}
+
+/* ============
+- H E A D E R -
+============ */
+
 .header {
   display: flex;
   flex-direction: column;
@@ -40,11 +63,11 @@ li {
     display: inline-block;
     @include tablet {
       padding: 1rem;
-      margin-right: 56px; //QUESTION: Why is the logo overlapping with the list/items?
+      margin-right: 56px;
+      margin-left: 5%;
     }
     @include desktop {
-      padding-left: 180px;
-      padding-right: 56px;
+      padding-left: 9%;
     }
   }
 
@@ -59,6 +82,7 @@ li {
     }
   }
   li {
+    font-family: "avenir-demi";
     text-align: center;
     width: 50%;
     padding-bottom: 2%;
@@ -81,6 +105,10 @@ li {
   }
 }
 
+/* =============
+- HERO SECTION -
+============= */
+
 .hero {
   color: #ffffff;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5)),
@@ -100,36 +128,39 @@ li {
   }
 
   h1 {
-    font-size: 60px;
+    font-family: "avenir-bold";
+    font-size: 60px; //QUESTION: 68px as per style guide but looks huge and even overflows when the window is less than 491px wide.
     line-height: 68px;
     margin-left: 16px;
     @include tablet {
-      margin-left: 24px;
+      margin-left: 5%;
     }
     @include desktop {
-      margin-left: 180px;
+      margin-left: 13%;
     }
   }
 }
+
+/* ===================
+MAIN BIOGRAPHY SECTION
+=================== */
 
 .main {
   display: flex;
   flex-direction: column;
 
-  h1 {
-    padding-bottom: 5%;
-    margin-left: 3%;
-    font-family: "avenir-bold";
-    font-size: 36px;
-    line-height: 44px;
+  &__heading {
+    @extend .section-heading;
+    padding-bottom: 3%;
 
     @include desktop {
-      padding-left: 5%;
+      padding-bottom: 5%;
+      padding-left: 8%;
     }
   }
 
   &__container {
-    padding: 5%;
+    padding: 5% 3%;
     .main__img {
       margin-bottom: 5%;
       width: 100%;
@@ -196,17 +227,24 @@ li {
   }
 }
 
+/* ==============
+- PHOTO GALLERY -
+============== */
+
 .photo-gallery {
   background-color: #fafafa;
   display: flex;
   flex-direction: column;
-  padding: 1% 10%;
-
-  h1 {
-    //insert styling if needed
+  padding: 2% 3%;
+  @include desktop {
+    padding: 2% 10%;
   }
 
-  &__images {
+  &__heading {
+    @extend .section-heading;
+  }
+
+  &__image-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -219,48 +257,109 @@ li {
       // margin-right: 230px;
     }
     img {
-      margin: 1rem 0.5rem 1rem 0;
-      width: 25vw;
+      margin: 1.5rem 0 0;
+      width: 90vw;
+      @include tablet {
+        width: 28.5vw;
+      }
+      @include desktop {
+        width: 25vw;
+      }
     }
   }
 }
+
+/* ==============
+-  F O O T E R  -
+============== */
 
 .footer {
   display: flex;
   flex-direction: column;
   background-color: #323232;
   color: #ffffff;
-  > * {
-    padding: 16px 16px;
+  padding: 2% 3%; // * * THIS PADDING CODE IS BEING USED TWICE * *
+  @include desktop {
+    padding: 2% 10%;
   }
+
+  /* ===============================
+  HEADING + SOCIAL MEDIA + SITE LOGO
+  =============================== */
+
   &__top-section {
     display: flex;
     flex-direction: column;
+    position: relative;
+    margin-bottom: 1%;
     @include tablet {
       flex-direction: row;
     }
-  }
+    .footer__heading {
+      @extend .section-heading;
+      margin-right: 5%;
+      margin-bottom: auto;
+    }
 
-  //QUESTION: Why are the icons stuck together? What am I forgetting..?
-
-  &__icon-container {
-    .footer__icons {
+    .footer__icon-container {
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      align-items: center;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      @include tablet {
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+      .footer__icons {
+        display: flex;
+        flex-direction: row;
+        img {
+          margin-right: 2rem;
+        }
+      }
     }
   }
+
+  .footer__logo {
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 25%;
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  /* ================
+  3 DIVS FOR CONTACTS
+  ================ */
+
   &__middle-section {
     display: flex;
     flex-direction: column;
+    margin-bottom: 1%;
     @include tablet {
       flex-direction: row;
     }
+
     div {
-      margin-right: 1.5rem;
+      margin-right: 0.9rem;
+      @include desktop {
+        margin-right: 1.8rem;
+      }
+      .footer__contact-name-and-organization {
+        font-family: "avenir-demi";
+        margin-bottom: 5%;
+      }
+      .footer__contact-regions {
+        margin-bottom: 5%;
+      }
     }
-    //QUESTION: What would be the best way to create vertical spacing between the <h1> and <p> tags? Create further <div> tags>?
   }
+
+  /* ============
+  COPYRIGHT INFO.
+  ============ */
 
   &__bottom-section {
     display: flex;
