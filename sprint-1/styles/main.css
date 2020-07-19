@@ -13,11 +13,75 @@
   src: url("../assets/fonts/avenir-regular.otf");
 }
 
+.h1-hero-header {
+  font-size: 60px;
+  line-height: 68px;
+}
+
+.h1-header,
+.main__quote {
+  font-size: 36px;
+  line-height: 44px;
+}
+
+.h2-header {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.h3-subheader {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.h4-paragraph-comments {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.h4-lists-and-contact-information {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.h5-labels {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.h1-header,
+.main__quote {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.h2-subheader {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.h4-paragraph,
+.main__first-paragraph,
+.main__second-paragraph {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.h4-lists-and-contact-information {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.h5-labels {
+  font-size: 12px;
+  line-height: 20px;
+}
+
 html,
 head,
 body {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: -4;
   color: #323232;
 }
@@ -28,7 +92,7 @@ body {
   font-family: "avenir-regular";
   margin: inherit;
   -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 ul,
@@ -38,29 +102,44 @@ li {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* ============
 UTILITY CLASSES
 ============ */
-.section-heading, .main__heading, .photo-gallery__heading, .footer__top-section .footer__heading {
+.section-heading,
+.main__heading,
+.gallery__heading,
+.footer__top-section .footer__heading {
   font-size: 24px;
   line-height: 32px;
   font-family: "avenir-bold";
 }
 
 @media screen and (min-width: 768px) {
-  .section-heading, .main__heading, .photo-gallery__heading, .footer__top-section .footer__heading {
+  .section-heading,
+  .main__heading,
+  .gallery__heading,
+  .footer__top-section .footer__heading {
     font-size: 36px;
     line-height: 44px;
   }
 }
 
-.h4-paragraph, .main__first-paragraph, .main__second-paragraph {
+.h4-paragraph,
+.main__first-paragraph,
+.main__second-paragraph {
   font-size: 13px;
   line-height: 18px;
 }
 
 @media screen and (min-width: 768px) {
-  .h4-paragraph, .main__first-paragraph, .main__second-paragraph {
+  .h4-paragraph,
+  .main__first-paragraph,
+  .main__second-paragraph {
     font-size: 14px;
     line-height: 22px;
   }
@@ -75,11 +154,11 @@ UTILITY CLASSES
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: #323232;
   color: #fafafa;
   height: 80px;
@@ -89,8 +168,8 @@ UTILITY CLASSES
   .header {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
 }
 
@@ -118,7 +197,7 @@ UTILITY CLASSES
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   width: 100%;
 }
 
@@ -136,18 +215,20 @@ UTILITY CLASSES
   padding-bottom: 2%;
 }
 
+.header__list-item :hover {
+  color: lightcoral;
+}
+
 @media screen and (min-width: 768px) {
   .header__list-item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     height: 100%;
     width: auto;
-    margin-right: 2vw;
-    margin-left: 2vw;
   }
 }
 
@@ -164,8 +245,15 @@ UTILITY CLASSES
 ============= */
 .hero {
   color: #ffffff;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5))), url(../assets/Images/adrien-converse-xzH7K6nVVgI-unsplash.jpg);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5)), url(../assets/Images/adrien-converse-xzH7K6nVVgI-unsplash.jpg);
+  background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      from(rgba(0, 0, 0, 0.5))
+    ),
+    url(../assets/Images/adrien-converse-xzH7K6nVVgI-unsplash.jpg);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5)),
+    url(../assets/Images/adrien-converse-xzH7K6nVVgI-unsplash.jpg);
   background-position: center;
   background-size: cover;
   width: 100vw;
@@ -175,11 +263,11 @@ UTILITY CLASSES
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -224,8 +312,8 @@ MAIN BIOGRAPHY SECTION
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .main__heading {
@@ -240,7 +328,7 @@ MAIN BIOGRAPHY SECTION
 }
 
 .main__container {
-  padding: 5% 3%;
+  padding: 5% 3% 3%;
 }
 
 .main__img {
@@ -256,8 +344,15 @@ MAIN BIOGRAPHY SECTION
 }
 
 .main__quote {
-  font-family: "avenir-bold";
-  margin-bottom: 2%;
+  font-family: "avenir-demi";
+  margin-bottom: 9%;
+}
+
+@media screen and (min-width: 768px) {
+  .main__quote {
+    font-family: "avenir-bold";
+    margin-bottom: 4.5%;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -269,7 +364,13 @@ MAIN BIOGRAPHY SECTION
 
 .main__quote-author {
   font-family: "avenir-demi";
-  margin-bottom: 3%;
+  margin-bottom: 9%;
+}
+
+@media screen and (min-width: 768px) {
+  .main__quote-author {
+    margin-bottom: 6.5%;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -280,8 +381,15 @@ MAIN BIOGRAPHY SECTION
 }
 
 .main__artist-names {
-  font-family: "avenir-bold";
+  font-family: "avenir-demi";
   margin-bottom: 1.5%;
+}
+
+@media screen and (min-width: 768px) {
+  .main__artist-names {
+    font-family: "avenir-bold";
+    margin-bottom: 3%;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -297,16 +405,16 @@ MAIN BIOGRAPHY SECTION
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 768px) {
   .main__paragraph-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
 }
 
@@ -344,61 +452,73 @@ MAIN BIOGRAPHY SECTION
 /* ==============
 - PHOTO GALLERY -
 ============== */
-.photo-gallery {
+.gallery {
   background-color: #fafafa;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 2% 3%;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 6% 3% 10%;
 }
 
-@media screen and (min-width: 1440px) {
-  .photo-gallery {
-    padding: 2% 10%;
+@media screen and (min-width: 768px) {
+  .gallery {
+    padding: 4% 3% 3.5%;
   }
 }
 
-.photo-gallery__image-container {
+.gallery__heading {
+  margin-bottom: 2%;
+}
+
+.gallery__image-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 @media screen and (min-width: 768px) {
-  .photo-gallery__image-container {
+  .gallery__image-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 }
 
-.photo-gallery__image-container img {
+.gallery__image {
   margin: 1.5rem auto 0;
   width: 100%;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.gallery__image :hover {
+  -webkit-filter: none;
+  filter: none;
 }
 
 @media screen and (min-width: 768px) {
-  .photo-gallery__image-container img {
+  .gallery__image {
+    margin: 1.5rem 0 0;
     width: 28.5vw;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .photo-gallery__image-container img {
+  .gallery__image {
     width: 25vw;
   }
 }
@@ -412,8 +532,8 @@ MAIN BIOGRAPHY SECTION
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   background-color: #323232;
   color: #ffffff;
   padding: 2% 3%;
@@ -440,8 +560,8 @@ MAIN BIOGRAPHY SECTION
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   position: relative;
   margin-bottom: 1%;
 }
@@ -450,8 +570,8 @@ MAIN BIOGRAPHY SECTION
   .footer__top-section {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     margin-bottom: 4%;
   }
 }
@@ -466,8 +586,8 @@ MAIN BIOGRAPHY SECTION
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: 2%;
   margin-bottom: 2%;
 }
@@ -485,8 +605,8 @@ MAIN BIOGRAPHY SECTION
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .footer__top-section .footer__icon-container .footer__icons img {
@@ -514,8 +634,8 @@ MAIN BIOGRAPHY SECTION
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin-bottom: 1%;
 }
 
@@ -523,8 +643,8 @@ MAIN BIOGRAPHY SECTION
   .footer__middle-section {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     padding-bottom: 1.5%;
   }
 }
@@ -554,16 +674,16 @@ MAIN BIOGRAPHY SECTION
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 768px) {
   .footer__bottom-section {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
 }
 /*# sourceMappingURL=main.css.map */
