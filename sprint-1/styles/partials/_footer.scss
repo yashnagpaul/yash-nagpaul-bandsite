@@ -9,7 +9,7 @@
   color: #ffffff;
   padding: 7% 3%;
   @include tablet {
-    padding: 6% 3% 4.5%;
+    padding: 6% 3.7% 4.5%;
   }
   @include desktop {
     padding: 3% 10% 1%;
@@ -104,6 +104,11 @@
     }
   }
 
+  &__email {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
   /* ============
     COPYRIGHT INFO.
     ============ */
@@ -116,15 +121,10 @@
     }
   }
   &__copyright {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 13px;
+    line-height: 18px;
     @include tablet {
       margin-top: -5%;
     }
-  }
-
-  &__email {
-    font-size: 13px;
-    line-height: 18px;
   }
 }

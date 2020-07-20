@@ -26,7 +26,7 @@
     font-family: "avenir-bold";
     margin-left: 5%;
     @include tablet {
-      margin-left: 5%;
+      margin-left: 3.7%;
       @include h1-hero-tab-mixin;
     }
     @include desktop {

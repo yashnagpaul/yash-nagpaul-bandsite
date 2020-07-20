@@ -6,6 +6,9 @@ MAIN BIOGRAPHY SECTION
   display: flex;
   flex-direction: column;
   padding: 5% 5% 3%;
+  @include tablet {
+    padding: 5% 3.7% 3%;
+  }
 
   &__heading {
     @extend .section-heading;

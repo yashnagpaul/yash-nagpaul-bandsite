@@ -61,7 +61,7 @@
 @media screen and (min-width: 768px) {
   .header__logo {
     margin-right: 5%;
-    margin-left: 5%;
+    margin-left: 3.7%;
   }
 }
 
@@ -165,7 +165,7 @@
 
 @media screen and (min-width: 768px) {
   .hero__banner-text {
-    margin-left: 5%;
+    margin-left: 3.7%;
     font-size: 60px;
     line-height: 68px;
   }
@@ -189,6 +189,12 @@ MAIN BIOGRAPHY SECTION
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 5% 5% 3%;
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    padding: 5% 3.7% 3%;
+  }
 }
 
 .main__heading {
@@ -366,7 +372,7 @@ MAIN BIOGRAPHY SECTION
 
 @media screen and (min-width: 768px) {
   .gallery {
-    padding: 4% 3% 3.5%;
+    padding: 4% 3.7% 3.5%;
   }
 }
 
@@ -464,7 +470,7 @@ MAIN BIOGRAPHY SECTION
 
 @media screen and (min-width: 768px) {
   .footer {
-    padding: 6% 3% 4.5%;
+    padding: 6% 3.7% 4.5%;
   }
 }
 
@@ -595,6 +601,11 @@ MAIN BIOGRAPHY SECTION
   }
 }
 
+.footer__email {
+  font-size: 13px;
+  line-height: 18px;
+}
+
 .footer__bottom-section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -615,19 +626,14 @@ MAIN BIOGRAPHY SECTION
 }
 
 .footer__copyright {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 13px;
+  line-height: 18px;
 }
 
 @media screen and (min-width: 768px) {
   .footer__copyright {
     margin-top: -5%;
   }
-}
-
-.footer__email {
-  font-size: 13px;
-  line-height: 18px;
 }
 
 /* ===========
