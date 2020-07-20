@@ -1,0 +1,130 @@
+/* ==============
+-  F O O T E R  -
+============== */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #323232;
+  color: #ffffff;
+  padding: 7% 3%;
+  @include tablet {
+    padding: 6% 3% 4.5%;
+  }
+  @include desktop {
+    padding: 3% 10% 1%;
+  }
+
+  /* ===============================
+    HEADING + SOCIAL MEDIA + SITE LOGO
+    =============================== */
+
+  &__top-section {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 1%;
+    @include tablet {
+      flex-direction: row;
+      margin-bottom: 4%;
+    }
+  }
+
+  &__heading {
+    font-family: "avenir-bold";
+    font-size: 36px;
+    line-height: 44px;
+    margin-right: 5%;
+    margin-bottom: auto;
+  }
+
+  &__icon-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    // justify-content: space-around;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    @include tablet {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+
+  &__icon {
+    margin-right: 2rem;
+  }
+
+  &__logo {
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 25%;
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  /* ================
+  3 DIVS FOR CONTACTS
+  ================ */
+
+  &__middle-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1%;
+    @include tablet {
+      flex-direction: row;
+      padding-bottom: 1.5%;
+    }
+  }
+
+  &__contact-container {
+    margin-right: 0.9rem;
+    margin-bottom: 5%;
+
+    @include desktop {
+      margin-right: 1.8rem;
+    }
+  }
+
+  &__contact-regions {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  &__contact-name-and-organization {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "avenir-demi";
+    // margin-bottom: 1%;
+    @include tablet {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  /* ============
+    COPYRIGHT INFO.
+    ============ */
+
+  &__bottom-section {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+  &__copyright {
+    font-size: 14px;
+    line-height: 22px;
+    @include tablet {
+      margin-top: -5%;
+    }
+  }
+
+  &__email {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}

@@ -1,5 +1,4 @@
-.h1-hero-tab {
-  //DONE
+@mixin h1-hero-tab-mixin {
   font-size: 60px;
   line-height: 68px;
 }
@@ -7,15 +6,12 @@
 /* = = = = = = = = = = = = = = = 
 = = = = = = = = = = = = = = = */
 
-.h1-tab {
-  //DONE
+@mixin h1-tab-mixin {
   font-size: 36px;
   line-height: 44px;
 }
 
-// MOBILE
-.h1-mob {
-  //DONE
+@mixin h1-mobile-mixin {
   font-size: 24px;
   line-height: 32px;
 }
@@ -23,7 +19,7 @@
 /* = = = = = = = = = = = = = = = 
 = = = = = = = = = = = = = = = */
 
-.h2-tab {
+@mixin h2-tab-mixin {
   font-size: 24px;
   line-height: 32px;
 }
@@ -31,12 +27,12 @@
 /* = = = = = = = = = = = = = = = 
 = = = = = = = = = = = = = = = */
 
-.h3-tab {
+@mixin h3-tab-mixin {
   font-size: 16px;
   line-height: 24px;
 }
 
-.h2-mobile {
+@mixin h2-mobile-mixin {
   font-size: 14px;
   line-height: 22px;
 }
@@ -44,12 +40,12 @@
 /* = = = = = = = = = = = = = = = 
 = = = = = = = = = = = = = = = */
 
-.h4-tab-para {
+@mixin h4-tab-para-mixin {
   font-size: 14px;
   line-height: 22px;
 }
 
-.h4-mobile-para {
+@mixin h4-mobile-para-mixin {
   font-size: 13px;
   line-height: 18px;
 }
@@ -57,12 +53,12 @@
 /* = = = = = = = = = = = = = = = 
 = = = = = = = = = = = = = = = */
 
-.h4-tab-lists-and-contact {
+@mixin h4-tab-lists-and-contact-mixin {
   font-size: 14px;
   line-height: 20px;
 }
 
-.h4-mobile-lists-and-contact {
+@mixin h4-mobile-lists-and-contact-mixin {
   font-size: 13px;
   line-height: 18px;
 }
@@ -70,15 +66,12 @@
 /* = = = = = = = = = = = = = = = 
 = = = = = = = = = = = = = = = */
 
-.h5-tab {
+@mixin h5-tab-mixin {
   font-size: 12px;
   line-height: 20px;
 }
 
-.h5-mobile {
+@mixin h5-mobile-mixin {
   font-size: 12px;
   line-height: 20px;
 }
-
-/* = = = = = = = = = = = = = = = 
-= = = = = = = = = = = = = = = */
