@@ -43,7 +43,7 @@
     text-align: center;
     width: 50%;
     padding-bottom: 3%;
-    :hover {
+    &:hover {
       color: lightcoral;
     }
     @include tablet {

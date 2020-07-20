@@ -42,7 +42,7 @@
     margin: 1rem auto 0;
     width: 100%;
     filter: grayscale(100%);
-    :hover {
+    &:hover {
       filter: none;
     }
 

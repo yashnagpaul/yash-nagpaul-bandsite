@@ -7,50 +7,5 @@
 @import "./partials/bio-main-section";
 @import "./partials/photo-gallery";
 @import "./partials/footer";
-
-/* ===========
-DEFAULT RESETS
-=========== */
-
-html,
-head,
-body {
-  box-sizing: border-box;
-  margin: -4;
-  color: #323232;
-}
-
-*,
-*::before,
-*::after {
-  font-family: "avenir-regular";
-  margin: inherit;
-  box-sizing: inherit;
-}
-
-ul,
-ol,
-li {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* ============
-UTILITY CLASSES
-============ */
-
-.section-heading {
-  font-size: 24px;
-  line-height: 32px;
-  font-family: "avenir-bold";
-  margin-top: 2%;
-  @include tablet {
-    font-size: 36px;
-    line-height: 44px;
-  }
-}
+@import "./partials/global-resets";
+@import "./partials/utility-classes";

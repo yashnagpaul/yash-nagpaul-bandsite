@@ -95,7 +95,7 @@
   padding-bottom: 3%;
 }
 
-.header__list-item :hover {
+.header__list-item:hover {
   color: lightcoral;
 }
 
@@ -419,7 +419,7 @@ MAIN BIOGRAPHY SECTION
           filter: grayscale(100%);
 }
 
-.gallery__image :hover {
+.gallery__image:hover {
   -webkit-filter: none;
           filter: none;
 }
