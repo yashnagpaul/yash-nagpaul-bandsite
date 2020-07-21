@@ -13,7 +13,7 @@
   src: url("../assets/fonts/avenir-regular.otf");
 }
 
-/* = = = = = = = = = = = = = = = 
+/* = = = = = = = = = = = = = = =
 = = = = = = = = = = = = = = = */
 /* = = = = = = = = = = = = = = = 
 = = = = = = = = = = = = = = = */
@@ -126,8 +126,7 @@
 ============= */
 .hero {
   color: #ffffff;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5))), url(../assets/Images/adrien-converse-xzH7K6nVVgI-unsplash.jpg);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5)), url(../assets/Images/adrien-converse-xzH7K6nVVgI-unsplash.jpg);
+  background: url(../assets/Images/adrien-converse-xzH7K6nVVgI-unsplash.jpg);
   background-position: center;
   background-size: cover;
   width: 100vw;
@@ -142,6 +141,17 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+}
+
+.hero::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 @media screen and (min-width: 768px) {
@@ -157,6 +167,7 @@
 }
 
 .hero__banner-text {
+  z-index: 99;
   font-size: 24px;
   line-height: 32px;
   font-family: "avenir-bold";
@@ -165,9 +176,9 @@
 
 @media screen and (min-width: 768px) {
   .hero__banner-text {
-    margin-left: 3.7%;
     font-size: 60px;
     line-height: 68px;
+    margin-left: 3.7%;
   }
 }
 

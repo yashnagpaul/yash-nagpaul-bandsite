@@ -1,0 +1,48 @@
+/* =============
+- HERO SECTION -
+============= */
+
+.hero {
+  color: #ffffff;
+  background: url(../assets/Images/adrien-converse-xzH7K6nVVgI-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 183px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  @include tablet {
+    height: 400px;
+  }
+  @include desktop {
+    height: 670px;
+  }
+
+  &__banner-text {
+    z-index: 99;
+    font-size: 24px;
+    line-height: 32px;
+    font-family: "avenir-bold";
+    margin-left: 5%;
+    @include tablet {
+      font-size: 60px;
+      line-height: 68px;
+      margin-left: 3.7%;
+    }
+    @include desktop {
+      margin-left: 13%;
+    }
+  }
+}
