@@ -111,8 +111,26 @@
         />
       </div>
     </section>
-    <section class="comments">
-<h1 class="section-heading"></h1>
+    <section class="conversation">
+      <h1 class="conversation__title"> Join the Conversation </h1>
+      <div class="conversation__new-comment-container">
+      <img class="conversation__new-comment-image" src="./assets/images/Mohan-muruge.jpg" alt="Image of the commenter">
+        <form class="conversation__new-comment">
+          <label class="conversation__form-labels" for="commenter-name">NAME</label>
+          <input type="text" id="commenter-name" placeholder="Your Name">
+          <br>
+          <label class="conversation__form-labels" for="comment-area">COMMENT</label>
+          <textarea
+          id="comment-area"
+          cols="30"
+          rows="10"
+          placeholder="Add a new comment"
+        >
+      </textarea>
+      <br>
+        <input class="conversation__button" type="submit" value="COMMENT">
+        </form>
+      </div>
     </section>
     <footer class="footer">
       <section class="footer__top-section">

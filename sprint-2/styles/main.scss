@@ -2,10 +2,18 @@
 @import "./partials/mixins";
 @import "./partials/fonts";
 @import "./partials/font-sizes";
-@import "./partials/header";
-@import "./partials/hero";
-@import "./partials/bio-main-section";
-@import "./partials/photo-gallery";
-@import "./partials/footer";
 @import "./partials/global-resets";
 @import "./partials/utility-classes";
+
+//COMMON STYLES USED IN BOTH PAGES
+@import "./partials/header";
+@import "./partials/hero";
+@import "./partials/footer";
+
+// * BIO * PAGE ONLY
+@import "./partials/bio-main-section";
+@import "./partials/photo-gallery";
+@import "./partials/index__conversation.scss";
+
+// * SHOWS * PAGE ONLY
+@import "./partials/shows-section";
