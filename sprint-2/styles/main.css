@@ -92,16 +92,17 @@ UTILITY CLASSES
   }
 }
 
-.primary-cta-button, .conversation__button {
+.primary-cta-button, .conversation__button, .shows-section__buy-button {
   border-radius: 4px;
   background-color: #323232;
   color: #e1e1e1;
   font-family: "avenir-demi";
   width: 100%;
-  padding: 6%;
+  max-width: 250px;
+  padding: 1% 6%;
 }
 
-.primary-cta-button:hover, .conversation__button:hover {
+.primary-cta-button:hover, .conversation__button:hover, .shows-section__buy-button:hover {
   background-color: black;
 }
 
@@ -746,12 +747,87 @@ MAIN BIOGRAPHY SECTION
       -ms-flex-direction: column;
           flex-direction: column;
   border-bottom: 1px solid;
+  padding-bottom: 100;
 }
 
 .conversation__form-labels {
   font-size: 12px;
   line-height: 20px;
   color: #afafaf;
+  font-family: "avenir-demi";
+}
+
+.shows-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .shows-section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .shows-section__shows-table {
+    min-width: 90%;
+  }
+}
+
+.shows-section__column-labels {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .shows-section__column-labels {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+.shows-section__each-show-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1%;
+}
+
+@media screen and (min-width: 768px) {
+  .shows-section__each-show-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.shows-section__label {
+  font-size: 12px;
+  line-height: 20px;
+  color: #afafaf;
+  font-family: "avenir-demi";
+  margin-bottom: auto;
+}
+
+.shows-section__date {
   font-family: "avenir-demi";
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,3 +1,45 @@
 .shows-section {
-  @extend .section-padding; //from _utility-classes.scss
+  @extend .section-padding;
+  display: flex;
+  flex-direction: column;
+  @include tablet {
+    flex-direction: row;
+  }
+
+  &__shows-table {
+    @include tablet {
+      min-width: 90%;
+    }
+  }
+
+  &__column-labels {
+    display: none;
+    @include tablet {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+
+  &__each-show-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1%;
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+
+  &__label {
+    @include mobile__h5;
+    margin-bottom: auto;
+  }
+
+  &__date {
+    font-family: "avenir-demi";
+  }
+
+  &__buy-button {
+    @extend .primary-cta-button;
+  }
 }
