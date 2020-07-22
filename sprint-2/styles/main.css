@@ -805,7 +805,9 @@ MAIN BIOGRAPHY SECTION
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 1%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-bottom: 1px solid #afafaf;
 }
 
 @media screen and (min-width: 768px) {
@@ -816,6 +818,9 @@ MAIN BIOGRAPHY SECTION
             flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -825,6 +830,12 @@ MAIN BIOGRAPHY SECTION
   color: #afafaf;
   font-family: "avenir-demi";
   margin-bottom: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .shows-section__label {
+    display: none;
+  }
 }
 
 .shows-section__date {

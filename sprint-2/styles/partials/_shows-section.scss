@@ -23,16 +23,22 @@
   &__each-show-container {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-bottom: 1px solid $silver;
     @include tablet {
       flex-direction: row;
       justify-content: space-around;
+      align-items: center;
     }
   }
 
   &__label {
     @include mobile__h5;
     margin-bottom: auto;
+    @include tablet {
+      display: none;
+    }
   }
 
   &__date {
