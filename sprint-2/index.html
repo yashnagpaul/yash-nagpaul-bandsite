@@ -115,13 +115,17 @@
       <h1 class="conversation__title"> Join the Conversation </h1>
       <div class="conversation__new-comment-container">
       <img class="conversation__new-comment-image" src="./assets/images/Mohan-muruge.jpg" alt="Image of the commenter">
-        <form class="conversation__new-comment">
+        <form class="conversation__comment-form">
           <label class="conversation__form-labels" for="commenter-name">NAME</label>
-          <input type="text" id="commenter-name" placeholder="Your Name">
+          <br>
+          <input class="cconversation__commenter-name" name="name_text_field" type="text" placeholder="Your Name">
+          <br>
           <br>
           <label class="conversation__form-labels" for="comment-area">COMMENT</label>
+          <br>
           <textarea
-          id="comment-area"
+          class="conversation__comment-area"
+          name="text_area"
           cols="30"
           rows="10"
           placeholder="Add a new comment"
@@ -130,6 +134,9 @@
       <br>
         <input class="conversation__button" type="submit" value="COMMENT">
         </form>
+      </div>
+      <div class="conversation__posted-comments">
+
       </div>
     </section>
     <footer class="footer">
@@ -196,5 +203,6 @@
         <h4 class="footer__copyright">All Rights Reserved</h4>
       </section>
     </footer>
+    <script src="./scripts/_conversation.js"></script>
   </body>
 </html>

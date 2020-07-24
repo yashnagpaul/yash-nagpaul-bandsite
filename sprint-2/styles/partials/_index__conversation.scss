@@ -7,9 +7,16 @@
     @extend .section-heading;
   }
 
+  &__comment-container-div {
+    border-bottom: 1px solid $silver;
+    padding-bottom: 5px;
+  }
+
   &__new-comment-container {
     display: flex;
     justify-content: center;
+    border-bottom: 1px solid $silver;
+    padding-bottom: 20px;
   }
 
   &__new-comment-image {
@@ -20,10 +27,9 @@
     margin-right: 2%;
   }
 
-  &__new-comment {
+  &__comment {
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid;
     padding-bottom: 100;
   }
 
@@ -33,5 +39,9 @@
 
   &__button {
     @extend .primary-cta-button;
+  }
+
+  &__name {
+    font-family: "avenir-demi";
   }
 }
