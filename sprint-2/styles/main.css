@@ -225,7 +225,7 @@ UTILITY CLASSES
   position: relative;
 }
 
-.hero::before {
+.hero::after {
   position: absolute;
   content: "";
   top: 0;
@@ -763,8 +763,29 @@ MAIN BIOGRAPHY SECTION
   font-family: "avenir-demi";
 }
 
+.conversation__name-and-date-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .conversation__name {
   font-family: "avenir-demi";
+  position: relative;
+}
+
+.conversation__name::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: -2.5rem;
+  border-radius: 50%;
+  background-color: #afafaf;
+}
+
+.conversation__date {
+  color: #afafaf;
 }
 
 .shows-section {

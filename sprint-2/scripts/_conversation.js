@@ -30,8 +30,11 @@ function commentMaker(commentsArray) {
     let commentContainerDiv = document.createElement("div");
     commentContainerDiv.classList.add("conversation__comment-container-div");
 
+    // let nameAndDateContainer = document.createElement ("div"); ADD
+    // commentContainerDiv.classList.add('conversation__name-and-date-container') ADD
+
     let name = document.createElement("p");
-    name.innerText = eachComment["name"];
+    name.innerText = eachComment["name"]; //try using bracket notation for dynamic key only
     name.classList.add("conversation__name");
 
     let date = document.createElement("p");
@@ -42,23 +45,30 @@ function commentMaker(commentsArray) {
     commentText.innerText = eachComment["comment"];
     commentText.classList.add("conversation__comment");
 
-    commentContainerDiv.appendChild(name);
-    commentContainerDiv.appendChild(date);
+    commentContainerDiv.appendChild(name); //delete this
+    //nameAndDateContainer.appendChild(name); ADD THIS
+
+    commentContainerDiv.appendChild(date); //delete this
+    //nameAndDateContainer.appendChild(date); ADD THIS
+
+    // commentContainerDiv.appendChild(nameAndDateContainer); ADD THIS
     commentContainerDiv.appendChild(commentText);
 
     postedComments.appendChild(commentContainerDiv);
   }
 }
 
-commentMaker(existingComments);
+commentMaker(existingComments); // renderComments would be better choice of fn name (function naming conventions)
 
 // SCRIPT FOR: FORM SUBMIT
 
 let commentForm = document.querySelector(".conversation__comment-form"); // find the comment form
 
+//name these kinds of functions like 'actionHandler' (submitHandler in this case)
+
 function clickSubmit(event) {
-  //what is this "event parameter" ...?
-  event.preventDefault();
+  //what is this "event parameter" ...? Think of it as: Run Function when EVENT occurs.
+  event.preventDefault(); // This is the first role of this function. The second role is below:
 
   let nameField = event.target.name_text_field.value;
   let newName = document.createElement("p");

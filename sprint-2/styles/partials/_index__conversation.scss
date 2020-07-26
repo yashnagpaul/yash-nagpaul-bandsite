@@ -41,7 +41,26 @@
     @extend .primary-cta-button;
   }
 
+  // =============================  POSTED COMMENTS ============================= //
+
+  &__name-and-date-container {
+    display: flex;
+  }
+
   &__name {
     font-family: "avenir-demi";
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      left: -2.5rem;
+      border-radius: 50%;
+      background-color: $silver;
+    }
+  }
+  &__date {
+    color: $silver;
   }
 }
