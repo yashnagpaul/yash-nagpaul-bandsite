@@ -23,7 +23,7 @@ let existingComments = [
 
 let postedComments = document.querySelector(".conversation__posted-comments");
 
-function commentMaker(commentsArray) {
+function displayComment(commentsArray) {
   postedComments.innerHTML = "";
   const sortedComments = commentsArray.sort((a, b) => b.date - a.date);
 
@@ -59,7 +59,7 @@ function commentMaker(commentsArray) {
   }
 }
 
-commentMaker(existingComments); // renderComments would be better choice of fn name (function naming conventions)
+displayComment(existingComments); // renderComments would be better choice of fn name (function naming conventions)
 
 // SCRIPT FOR: FORM SUBMIT
 
@@ -97,7 +97,7 @@ function clickSubmit(event) {
 
   existingComments.unshift(newCommentObject);
 
-  commentMaker(existingComments);
+  displayComment(existingComments);
 
   event.target.reset();
 }
