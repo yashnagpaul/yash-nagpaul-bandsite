@@ -4,12 +4,10 @@ MAIN BIOGRAPHY SECTION
 
 .main {
   @extend .section-padding;
-  // display: flex;
-  // flex-direction: column;
-  // padding: 5% 5% 3%;
-  // @include tablet {
-  //   padding: 5% 3.7% 3%;
-  // }
+  @include desktop {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
 
   &__heading {
     @extend .section-heading;

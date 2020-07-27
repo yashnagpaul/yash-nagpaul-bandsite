@@ -62,14 +62,14 @@ a {
 /* ============
 UTILITY CLASSES
 ============ */
-.section-heading, .main__heading, .gallery__heading, .conversation__title {
+.section-heading, .main__heading, .gallery__heading, .conversation__title, .shows-section__title-heading {
   font-size: 24px;
   line-height: 32px;
   font-family: "avenir-bold";
 }
 
 @media screen and (min-width: 768px) {
-  .section-heading, .main__heading, .gallery__heading, .conversation__title {
+  .section-heading, .main__heading, .gallery__heading, .conversation__title, .shows-section__title-heading {
     margin-left: 0;
     font-size: 36px;
     line-height: 44px;
@@ -89,17 +89,25 @@ UTILITY CLASSES
 @media screen and (min-width: 1440px) {
   .section-padding, .main, .conversation, .shows-section {
     padding-left: 11.5%;
+    padding-right: 9.5%;
   }
 }
 
+.selected-text-input, .conversation__commenter-name, .conversation__comment-area {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 2%;
+  outline-color: black;
+  border: 1.5px solid #e1e1e1;
+}
+
 .primary-cta-button, .conversation__button, .shows-section__buy-button {
-  border-radius: 4px;
+  border-radius: 5px;
+  border: 0px solid;
   background-color: #323232;
   color: #e1e1e1;
   font-family: "avenir-demi";
   width: 100%;
-  max-width: 250px;
-  padding: 1% 6%;
+  padding: 12px;
 }
 
 .primary-cta-button:hover, .conversation__button:hover, .shows-section__buy-button:hover {
@@ -148,7 +156,7 @@ UTILITY CLASSES
 
 @media screen and (min-width: 1440px) {
   .header__logo {
-    margin-left: 13%;
+    margin-left: 11%;
   }
 }
 
@@ -207,7 +215,6 @@ UTILITY CLASSES
 ============= */
 .hero {
   color: #ffffff;
-  background: url(../assets/Images/adrien-converse-xzH7K6nVVgI-unsplash.jpg);
   background-position: center;
   background-size: cover;
   width: 100vw;
@@ -219,10 +226,8 @@ UTILITY CLASSES
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   position: relative;
+  padding-left: 5%;
 }
 
 .hero::after {
@@ -237,35 +242,117 @@ UTILITY CLASSES
 
 @media screen and (min-width: 768px) {
   .hero {
+    padding-left: 3.7%;
     height: 400px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .hero {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-left: 11.5%;
     height: 670px;
   }
 }
 
-.hero__banner-text {
+.hero--bio {
+  background: url(../assets/Images/adrien-converse-xzH7K6nVVgI-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.hero--shows {
+  background: url(../assets/images/osman-rana-h8ZvH1Nf7Bk-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 472px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero--shows {
+    height: 670px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero--shows {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+}
+
+.hero__text-container {
   z-index: 99;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.hero__banner-h2 {
+  font-family: "avenir-bold";
+  font-size: 14px;
+  line-height: 22px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__banner-h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.hero__banner-text {
   font-size: 24px;
   line-height: 32px;
   font-family: "avenir-bold";
-  margin-left: 5%;
 }
 
 @media screen and (min-width: 768px) {
   .hero__banner-text {
     font-size: 60px;
     line-height: 68px;
-    margin-left: 3.7%;
+    margin-right: 64px;
+  }
+}
+
+.hero__banner-text--shows {
+  font-size: 34.82px;
+  line-height: 44px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__banner-text--shows {
+    font-size: 60px;
+    line-height: 68px;
+  }
+}
+
+.hero__iframe {
+  z-index: 99;
+  width: 95%;
+  height: 100px;
+  margin-top: -7%;
+  margin-bottom: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__iframe {
+    width: 436px;
+    height: 146px;
+    margin-top: -7%;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .hero__banner-text {
-    margin-left: 13%;
+  .hero__iframe {
+    margin-top: auto;
+    margin-bottom: 16%;
   }
 }
 
@@ -465,6 +552,13 @@ UTILITY CLASSES
 /* ===================
 MAIN BIOGRAPHY SECTION
 =================== */
+@media screen and (min-width: 1440px) {
+  .main {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
 .main__heading {
   padding-bottom: 5%;
 }
@@ -721,11 +815,6 @@ MAIN BIOGRAPHY SECTION
           flex-direction: column;
 }
 
-.conversation__comment-container-div {
-  border-bottom: 1px solid #afafaf;
-  padding-bottom: 5px;
-}
-
 .conversation__new-comment-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -734,18 +823,67 @@ MAIN BIOGRAPHY SECTION
       -ms-flex-pack: center;
           justify-content: center;
   border-bottom: 1px solid #afafaf;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .conversation__new-comment-container {
+    margin: 1% 18%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .conversation__new-comment-container {
+    margin: 1% 25%;
+  }
 }
 
 .conversation__new-comment-image {
-  width: 45px;
+  width: 48px;
   height: 45px;
   border-radius: 50%;
-  margin-top: 17px;
-  margin-right: 2%;
+  margin: 17px 20px auto 0px;
+}
+
+.conversation__comment-form {
+  margin: 0;
+}
+
+.conversation__commenter-name {
+  min-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .conversation__commenter-name {
+    min-width: 395px;
+    min-height: 40px;
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .conversation__commenter-name {
+    min-width: 520px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .conversation__comment-area {
+    min-width: 395px;
+    height: 100px;
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .conversation__comment-area {
+    min-width: 520px;
+  }
 }
 
 .conversation__comment {
+  font-size: 13px;
+  line-height: 18px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -753,7 +891,13 @@ MAIN BIOGRAPHY SECTION
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-bottom: 100;
+}
+
+@media screen and (min-width: 768px) {
+  .conversation__comment {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .conversation__form-labels {
@@ -763,10 +907,53 @@ MAIN BIOGRAPHY SECTION
   font-family: "avenir-demi";
 }
 
+.conversation__button {
+  margin: 12px auto 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .conversation__button {
+    max-width: 170px;
+    float: right;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .conversation__button {
+    font-size: 16px;
+    max-width: 200px;
+  }
+}
+
+.conversation__posted-comments {
+  padding-left: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .conversation__posted-comments {
+    padding: 1% 18%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .conversation__posted-comments {
+    padding: 1% 25%;
+  }
+}
+
+.conversation__comment-container-div {
+  border-bottom: 1px solid #afafaf;
+  padding: 25px 5px;
+}
+
 .conversation__name-and-date-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 5px;
 }
 
 .conversation__name {
@@ -784,8 +971,28 @@ MAIN BIOGRAPHY SECTION
   background-color: #afafaf;
 }
 
+@media screen and (min-width: 1440px) {
+  .conversation__name {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
 .conversation__date {
   color: #afafaf;
+}
+
+@media screen and (min-width: 768px) {
+  .conversation__date {
+    margin-left: 15px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .conversation__date {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .shows-section {
@@ -798,7 +1005,7 @@ MAIN BIOGRAPHY SECTION
           flex-direction: column;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1440px) {
   .shows-section {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -808,8 +1015,20 @@ MAIN BIOGRAPHY SECTION
 }
 
 @media screen and (min-width: 768px) {
+  .shows-section__title-heading {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .shows-section__title-heading {
+    padding-right: 175px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .shows-section__shows-table {
-    min-width: 90%;
+    min-width: 77%;
   }
 }
 
@@ -822,9 +1041,9 @@ MAIN BIOGRAPHY SECTION
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
   }
 }
 
@@ -836,8 +1055,8 @@ MAIN BIOGRAPHY SECTION
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 1%;
-  padding-bottom: 1%;
+  padding-top: 2%;
+  margin-bottom: 4%;
   border-bottom: 1px solid #afafaf;
 }
 
@@ -847,12 +1066,21 @@ MAIN BIOGRAPHY SECTION
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
+}
+
+.shows-section__desk-label {
+  font-size: 12px;
+  line-height: 20px;
+  color: #afafaf;
+  font-family: "avenir-demi";
+  margin-right: 20vw;
 }
 
 .shows-section__label {
@@ -871,5 +1099,27 @@ MAIN BIOGRAPHY SECTION
 
 .shows-section__date {
   font-family: "avenir-demi";
+}
+
+@media screen and (min-width: 768px) {
+  .shows-section__date {
+    margin-right: 9vw;
+  }
+}
+
+.shows-section__venue-and-location {
+  margin-left: -1px;
+}
+
+@media screen and (min-width: 768px) {
+  .shows-section__venue-and-location {
+    margin-right: 10vw;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .shows-section__buy-button {
+    max-width: 170px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

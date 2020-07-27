@@ -30,8 +30,8 @@ function commentMaker(commentsArray) {
     let commentContainerDiv = document.createElement("div");
     commentContainerDiv.classList.add("conversation__comment-container-div");
 
-    // let nameAndDateContainer = document.createElement ("div"); ADD
-    // commentContainerDiv.classList.add('conversation__name-and-date-container') ADD
+    let nameAndDateContainer = document.createElement("div"); // ADDED
+    nameAndDateContainer.classList.add("conversation__name-and-date-container"); // ADDED
 
     let name = document.createElement("p");
     name.innerText = eachComment["name"]; //try using bracket notation for dynamic key only
@@ -45,13 +45,13 @@ function commentMaker(commentsArray) {
     commentText.innerText = eachComment["comment"];
     commentText.classList.add("conversation__comment");
 
-    commentContainerDiv.appendChild(name); //delete this
-    //nameAndDateContainer.appendChild(name); ADD THIS
+    // commentContainerDiv.appendChild(name); // DELETED
+    nameAndDateContainer.appendChild(name); // ADDED
 
-    commentContainerDiv.appendChild(date); //delete this
-    //nameAndDateContainer.appendChild(date); ADD THIS
+    // commentContainerDiv.appendChild(date); // DELETED
+    nameAndDateContainer.appendChild(date); // ADDED
 
-    // commentContainerDiv.appendChild(nameAndDateContainer); ADD THIS
+    commentContainerDiv.appendChild(nameAndDateContainer); // ADDED
     commentContainerDiv.appendChild(commentText);
 
     postedComments.appendChild(commentContainerDiv);

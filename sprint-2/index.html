@@ -20,9 +20,11 @@
         </li>
       </ul>
     </header>
-    <section class="hero">
+    <section class="hero hero--bio">
+      <div class="hero__text-container">
       <h1 class="hero__banner-text">Gaspard Auge &</h1>
       <h1 class="hero__banner-text">Xavier de Rosnay</h1>
+      <div class="hero__text-container">
     </section>
     <main class="main">
       <h1 class="main__heading">About The Musicians</h1>
@@ -118,7 +120,7 @@
         <form class="conversation__comment-form">
           <label class="conversation__form-labels" for="commenter-name">NAME</label>
           <br>
-          <input class="cconversation__commenter-name" name="name_text_field" type="text" placeholder="Your Name">
+          <input class="conversation__commenter-name" name="name_text_field" type="text" placeholder="Your Name">
           <br>
           <br>
           <label class="conversation__form-labels" for="comment-area">COMMENT</label>
@@ -128,9 +130,8 @@
           name="text_area"
           cols="30"
           rows="10"
-          placeholder="Add a new comment"
-        >
-      </textarea>
+          placeholder="Add new comment..."
+          ></textarea>
       <br>
         <input class="conversation__button" type="submit" value="COMMENT">
         </form>

@@ -2,13 +2,23 @@
   @extend .section-padding;
   display: flex;
   flex-direction: column;
-  @include tablet {
+  @include desktop {
     flex-direction: row;
+  }
+
+  &__title-heading {
+    @extend .section-heading;
+    @include tablet {
+      margin-bottom: 40px;
+    }
+    @include desktop {
+      padding-right: 175px;
+    }
   }
 
   &__shows-table {
     @include tablet {
-      min-width: 90%;
+      min-width: 77%;
     }
   }
 
@@ -16,21 +26,28 @@
     display: none;
     @include tablet {
       display: flex;
-      justify-content: space-evenly;
+      justify-content: left;
     }
   }
 
   &__each-show-container {
     display: flex;
     flex-direction: column;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    padding-top: 2%;
+    margin-bottom: 4%;
     border-bottom: 1px solid $silver;
     @include tablet {
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
     }
+  }
+
+  &__desk-label {
+    @include desk__h5;
+    color: $silver;
+    font-family: "avenir-demi";
+    margin-right: 20vw;
   }
 
   &__label {
@@ -43,9 +60,22 @@
 
   &__date {
     font-family: "avenir-demi";
+    @include tablet {
+      margin-right: 9vw;
+    }
+  }
+
+  &__venue-and-location {
+    margin-left: -1px;
+    @include tablet {
+      margin-right: 10vw;
+    }
   }
 
   &__buy-button {
     @extend .primary-cta-button;
+    @include tablet {
+      max-width: 170px;
+    }
   }
 }

@@ -35,7 +35,7 @@ let shows = [
 
   {
     date: "Wed Aug 11 2019",
-    venue: "Pres Club,",
+    venue: "Pres Club",
     location: "San Fancisco, CA",
   },
 ];
@@ -105,7 +105,7 @@ function createShowsTable(shows) {
     locationLabelAndItem.appendChild(locationLabel);
 
     let location = document.createElement("h5");
-    venue.classList.add("shows-section__venue-and-location");
+    location.classList.add("shows-section__venue-and-location");
     location.innerText = show["location"];
     locationLabelAndItem.appendChild(location);
 
