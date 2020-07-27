@@ -28,7 +28,7 @@
     display: none;
     @include tablet {
       display: flex;
-      justify-content: left;
+      justify-content: space-between;
     }
   }
 
@@ -49,9 +49,24 @@
     @include desk__h5;
     color: $silver;
     font-family: "avenir-demi";
-    margin-right: 21vw;
-    @include desktop {
-      margin-right: 15vw;
+    width: 170px;
+  }
+
+  &__date-label-item-container {
+    @include tablet {
+      width: 200px;
+    }
+  }
+
+  &__venue-label-item-container {
+    @include tablet {
+      width: 200px;
+    }
+  }
+
+  &__location-label-item-container {
+    @include tablet {
+      width: 200px;
     }
   }
 
@@ -71,7 +86,6 @@
   }
 
   &__venue-and-location {
-    margin-left: -1px;
     @include tablet {
       @include desk__h4-para;
     }
