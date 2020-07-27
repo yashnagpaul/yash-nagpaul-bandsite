@@ -8,6 +8,8 @@
 
   &__title-heading {
     @extend .section-heading;
+    line-height: 72px;
+    margin-bottom: 7%;
     @include tablet {
       margin-bottom: 40px;
     }
@@ -47,12 +49,15 @@
     @include desk__h5;
     color: $silver;
     font-family: "avenir-demi";
-    margin-right: 20vw;
+    margin-right: 21vw;
+    @include desktop {
+      margin-right: 15vw;
+    }
   }
 
   &__label {
     @include mobile__h5;
-    margin-bottom: auto;
+    margin-bottom: 4%;
     @include tablet {
       display: none;
     }
@@ -61,14 +66,14 @@
   &__date {
     font-family: "avenir-demi";
     @include tablet {
-      margin-right: 9vw;
+      @include desk__h4-para;
     }
   }
 
   &__venue-and-location {
     margin-left: -1px;
     @include tablet {
-      margin-right: 10vw;
+      @include desk__h4-para;
     }
   }
 

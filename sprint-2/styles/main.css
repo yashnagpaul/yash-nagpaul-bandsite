@@ -815,6 +815,10 @@ MAIN BIOGRAPHY SECTION
           flex-direction: column;
 }
 
+.conversation__title {
+  margin-bottom: 7%;
+}
+
 .conversation__new-comment-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -850,6 +854,7 @@ MAIN BIOGRAPHY SECTION
 }
 
 .conversation__commenter-name {
+  padding: 10px;
   min-width: 100%;
 }
 
@@ -857,7 +862,6 @@ MAIN BIOGRAPHY SECTION
   .conversation__commenter-name {
     min-width: 395px;
     min-height: 40px;
-    padding: 10px;
   }
 }
 
@@ -867,11 +871,14 @@ MAIN BIOGRAPHY SECTION
   }
 }
 
+.conversation__comment-area {
+  padding: 10px;
+}
+
 @media screen and (min-width: 768px) {
   .conversation__comment-area {
     min-width: 395px;
     height: 100px;
-    padding: 10px;
   }
 }
 
@@ -893,7 +900,7 @@ MAIN BIOGRAPHY SECTION
           flex-direction: column;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1440px) {
   .conversation__comment {
     font-size: 16px;
     line-height: 24px;
@@ -956,7 +963,17 @@ MAIN BIOGRAPHY SECTION
   margin-bottom: 5px;
 }
 
+@media screen and (min-width: 768px) {
+  .conversation__name-and-date-container {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+}
+
 .conversation__name {
+  font-size: 13px;
+  line-height: 18px;
   font-family: "avenir-demi";
   position: relative;
 }
@@ -971,6 +988,13 @@ MAIN BIOGRAPHY SECTION
   background-color: #afafaf;
 }
 
+@media screen and (min-width: 768px) {
+  .conversation__name {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
 @media screen and (min-width: 1440px) {
   .conversation__name {
     font-size: 16px;
@@ -979,11 +1003,15 @@ MAIN BIOGRAPHY SECTION
 }
 
 .conversation__date {
+  font-size: 13px;
+  line-height: 18px;
   color: #afafaf;
 }
 
 @media screen and (min-width: 768px) {
   .conversation__date {
+    font-size: 14px;
+    line-height: 22px;
     margin-left: 15px;
   }
 }
@@ -1012,6 +1040,11 @@ MAIN BIOGRAPHY SECTION
         -ms-flex-direction: row;
             flex-direction: row;
   }
+}
+
+.shows-section__title-heading {
+  line-height: 72px;
+  margin-bottom: 7%;
 }
 
 @media screen and (min-width: 768px) {
@@ -1080,7 +1113,13 @@ MAIN BIOGRAPHY SECTION
   line-height: 20px;
   color: #afafaf;
   font-family: "avenir-demi";
-  margin-right: 20vw;
+  margin-right: 21vw;
+}
+
+@media screen and (min-width: 1440px) {
+  .shows-section__desk-label {
+    margin-right: 15vw;
+  }
 }
 
 .shows-section__label {
@@ -1088,7 +1127,7 @@ MAIN BIOGRAPHY SECTION
   line-height: 20px;
   color: #afafaf;
   font-family: "avenir-demi";
-  margin-bottom: auto;
+  margin-bottom: 4%;
 }
 
 @media screen and (min-width: 768px) {
@@ -1103,7 +1142,8 @@ MAIN BIOGRAPHY SECTION
 
 @media screen and (min-width: 768px) {
   .shows-section__date {
-    margin-right: 9vw;
+    font-size: 14px;
+    line-height: 22px;
   }
 }
 
@@ -1113,7 +1153,8 @@ MAIN BIOGRAPHY SECTION
 
 @media screen and (min-width: 768px) {
   .shows-section__venue-and-location {
-    margin-right: 10vw;
+    font-size: 14px;
+    line-height: 22px;
   }
 }
 

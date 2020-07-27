@@ -20,6 +20,7 @@ let existingComments = [
 ];
 
 // Creating pre-existing comments on the page
+
 let postedComments = document.querySelector(".conversation__posted-comments");
 
 function commentMaker(commentsArray) {
@@ -38,7 +39,7 @@ function commentMaker(commentsArray) {
     name.classList.add("conversation__name");
 
     let date = document.createElement("p");
-    date.innerText = eachComment["date"];
+    date.innerText = eachComment["date"].toDateString();
     date.classList.add("conversation__date");
 
     let commentText = document.createElement("p");
@@ -67,7 +68,7 @@ let commentForm = document.querySelector(".conversation__comment-form"); // find
 //name these kinds of functions like 'actionHandler' (submitHandler in this case)
 
 function clickSubmit(event) {
-  //what is this "event parameter" ...? Think of it as: Run Function when EVENT occurs.
+  //what is this "event parameter" ...? Think of it as something that tells the function to run only when an EVENT occurs.
   event.preventDefault(); // This is the first role of this function. The second role is below:
 
   let nameField = event.target.name_text_field.value;
