@@ -1,0 +1,152 @@
+.conversation {
+  @extend .section-padding;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    @extend .section-heading;
+    margin-bottom: 7%;
+  }
+
+  // ======================= THE INPUT FORM ======================= //
+
+  &__new-comment-container {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid $silver;
+    margin-bottom: 20px;
+    @include tablet {
+      margin: 1% 18%;
+    }
+    @include desktop {
+      margin: 1% 25%;
+    }
+  }
+
+  &__new-comment-image {
+    width: 48px;
+    height: 45px;
+    border-radius: 50%;
+    margin: 17px 20px auto 0px;
+  }
+
+  &__comment-form {
+    margin: 0;
+  }
+
+  &__commenter-name {
+    @extend .selected-text-input;
+    padding: 10px;
+
+    min-width: 100%;
+    @include tablet {
+      min-width: 395px;
+      min-height: 40px;
+    }
+    @include desktop {
+      min-width: 520px;
+    }
+  }
+
+  &__comment-area {
+    @extend .selected-text-input;
+    padding: 10px;
+
+    @include tablet {
+      min-width: 395px;
+      height: 100px;
+    }
+    @include desktop {
+      min-width: 520px;
+    }
+  }
+
+  &__comment {
+    @include mobile__h4-para;
+    display: flex;
+    flex-direction: column;
+    @include desktop {
+      @include desk__h3;
+    }
+  }
+
+  &__form-labels {
+    @include mobile__h5;
+  }
+
+  &__button {
+    @extend .primary-cta-button;
+    margin: 12px auto 20px;
+    @include tablet {
+      max-width: 170px;
+      float: right;
+    }
+
+    @include desktop {
+      font-size: 16px;
+      max-width: 200px;
+    }
+  }
+
+  // =============================  POSTED COMMENTS ============================= //
+
+  &__posted-comments {
+    padding-left: 30px;
+    @include tablet {
+      padding: 1% 18%;
+    }
+    @include desktop {
+      padding: 1% 25%;
+    }
+  }
+
+  &__comment-container-div {
+    border-bottom: 1px solid $silver;
+    padding: 25px 5px;
+    @include tablet {
+    }
+  }
+
+  &__name-and-date-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    @include tablet {
+      justify-content: left;
+    }
+  }
+
+  &__name {
+    @include mobile__h4-para;
+    font-family: "avenir-demi";
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      left: -2.5rem;
+      border-radius: 50%;
+      background-color: $silver;
+    }
+    @include tablet {
+      @include desk__h4-para;
+    }
+
+    @include desktop {
+      @include desk__h3;
+    }
+  }
+
+  &__date {
+    @include mobile__h4-para;
+    color: $silver;
+    @include tablet {
+      @include desk__h4-para;
+      margin-left: 15px;
+    }
+    @include desktop {
+      @include desk__h3;
+    }
+  }
+}

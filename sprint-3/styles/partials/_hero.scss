@@ -1,0 +1,109 @@
+/* =============
+- HERO SECTION -
+============= */
+
+.hero {
+  color: #ffffff;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 183px;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  position: relative;
+  padding-left: 5%;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  @include tablet {
+    padding-left: 3.7%;
+    height: 400px;
+  }
+  @include desktop {
+    flex-direction: row;
+    padding-left: 11.5%;
+    height: 670px;
+  }
+
+  &--bio {
+    background: url(../assets/Images/adrien-converse-xzH7K6nVVgI-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  &--shows {
+    background: url(../assets/images/osman-rana-h8ZvH1Nf7Bk-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    height: 472px;
+
+    @include tablet {
+      height: 670px;
+    }
+    @include desktop {
+      justify-content: left;
+    }
+  }
+
+  &__text-container {
+    z-index: 99;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  &__banner-h2 {
+    font-family: "avenir-bold";
+    @include mobile__h2;
+    @include tablet {
+      @include desk__h2;
+    }
+  }
+
+  &__banner-text {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: "avenir-bold";
+    @include tablet {
+      font-size: 60px;
+      line-height: 68px;
+      margin-right: 64px;
+    }
+  }
+
+  &__banner-text--shows {
+    font-size: 34.82px;
+    line-height: 44px;
+    @include tablet {
+      @include desk__hero-heading;
+    }
+  }
+
+  // ======================= FOR SHOWS PAGE ONLY ======================= //
+
+  &__iframe {
+    z-index: 99;
+    width: 95%;
+    height: 100px;
+    margin-top: -7%;
+
+    margin-bottom: auto;
+    @include tablet {
+      width: 436px;
+      height: 146px;
+      margin-top: -7%;
+    }
+    @include desktop {
+      margin-top: auto;
+      margin-bottom: 16%;
+    }
+  }
+}

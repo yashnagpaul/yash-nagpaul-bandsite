@@ -1,0 +1,100 @@
+.shows-section {
+  @extend .section-padding;
+  display: flex;
+  flex-direction: column;
+  @include desktop {
+    flex-direction: row;
+  }
+
+  &__title-heading {
+    @extend .section-heading;
+    line-height: 72px;
+    margin-bottom: 7%;
+    @include tablet {
+      margin-bottom: 40px;
+    }
+    @include desktop {
+      padding-right: 175px;
+    }
+  }
+
+  &__shows-table {
+    @include tablet {
+      min-width: 77%;
+    }
+  }
+
+  &__column-labels {
+    display: none;
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__each-show-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2%;
+    margin-bottom: 4%;
+    border-bottom: 1px solid $silver;
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__desk-label {
+    @include desk__h5;
+    color: $silver;
+    font-family: "avenir-demi";
+    width: 170px;
+  }
+
+  &__date-label-item-container {
+    @include tablet {
+      width: 200px;
+    }
+  }
+
+  &__venue-label-item-container {
+    @include tablet {
+      width: 200px;
+    }
+  }
+
+  &__location-label-item-container {
+    @include tablet {
+      width: 200px;
+    }
+  }
+
+  &__label {
+    @include mobile__h5;
+    margin-bottom: 4%;
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__date {
+    font-family: "avenir-demi";
+    @include tablet {
+      @include desk__h4-para;
+    }
+  }
+
+  &__venue-and-location {
+    @include tablet {
+      @include desk__h4-para;
+    }
+  }
+
+  &__buy-button {
+    @extend .primary-cta-button;
+    @include tablet {
+      max-width: 170px;
+    }
+  }
+}
