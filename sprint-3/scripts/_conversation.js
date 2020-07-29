@@ -18,15 +18,15 @@ getComments = () => {
         );
 
         let name = document.createElement("p");
-        name.innerText = eachComment["name"]; //try using bracket notation for dynamic key only
+        name.innerText = eachComment.name;
         name.classList.add("conversation__name");
 
         let date = document.createElement("p");
-        date.innerText = eachComment["timestamp"];
+        date.innerText = eachComment.timestamp;
         date.classList.add("conversation__date");
 
         let commentText = document.createElement("p");
-        commentText.innerText = eachComment["comment"];
+        commentText.innerText = eachComment.comment;
         commentText.classList.add("conversation__comment");
 
         nameAndDateContainer.appendChild(name);
