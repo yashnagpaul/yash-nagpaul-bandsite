@@ -2,7 +2,7 @@ let showsTable = document.querySelector(".shows-section__shows-table");
 
 axios
   .get("https://project-1-api.herokuapp.com/showdates", {
-    params: { api_key: "13a72795-80d5-4254-83f3-52b13ce17108" }, //QUESTION: What is this params keyword, found it in the readings.
+    params: { api_key: "13a72795-80d5-4254-83f3-52b13ce17108" }, //QUESTION: What is this params keyword, found it in the readings. ANSWER: We're entering parameter for the URL.
   })
   .then((response) => {
     for (item of response.data) {
@@ -77,8 +77,5 @@ axios
       // This roughly works the same way as the .push() method in arrays.
 
       showsTable.appendChild(eachShow);
-
-      console.log(item.place);
-      console.log(item.location);
     }
   });
