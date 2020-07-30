@@ -26,7 +26,7 @@ getComments = () => {
         name.classList.add("conversation__name");
 
         let date = document.createElement("p");
-        date.innerText = eachComment.timestamp;
+        date.innerText = new Date(eachComment.timestamp).toDateString();
         date.classList.add("conversation__date");
 
         let commentText = document.createElement("p");
@@ -73,14 +73,16 @@ function clickSubmit(event) {
   let nameField = event.target.name_text_field.value;
   let commentContent = event.target.text_area.value;
 
-  let newCommentObject = {
-    name: nameField,
-    comment: commentContent,
-  };
+  if (nameField !== "" && commentContent !== "") {
+    let newCommentObject = {
+      name: nameField,
+      comment: commentContent,
+    };
 
-  pushComment(newCommentObject);
+    pushComment(newCommentObject);
 
-  event.target.reset();
+    event.target.reset();
+  } else alert("Please enter a valid comment.");
 }
 
 // ==================== FINALLY WE ATTACH AN EVENT LISTENER TO THE FORM ==================== //
