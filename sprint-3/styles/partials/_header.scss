@@ -49,8 +49,9 @@
     @include tablet {
       display: flex;
       align-items: center;
+      justify-content: center;
       height: 100%;
-      width: auto;
+      width: 100px;
       padding-bottom: 0%;
     }
   }

@@ -13,7 +13,7 @@
   &__new-comment-container {
     display: flex;
     justify-content: center;
-    border-bottom: 1px solid $silver;
+    border-bottom: 1px solid $mercury;
     margin-bottom: 20px;
     @include tablet {
       margin: 1% 18%;
@@ -101,7 +101,7 @@
   }
 
   &__comment-container-div {
-    border-bottom: 1px solid $silver;
+    border-bottom: 1px solid $mercury;
     padding: 25px 5px;
     @include tablet {
     }
