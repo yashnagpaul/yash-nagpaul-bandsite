@@ -1,7 +1,11 @@
 getComments = () => {
+  console.log("getting comments");
+
   axios
     .get("https://project-1-api.herokuapp.com/comments?api_key=yash")
     .then((result) => {
+      console.log("retrieved comments");
+
       const sortedComments = result.data.sort(
         (a, b) => b.timestamp - a.timestamp
       );
@@ -53,8 +57,11 @@ pushComment = (newObject) => {
       "https://project-1-api.herokuapp.com/comments?api_key=yash",
       newObject
     )
-    .then((postedComments.innerHTML = ""))
-    .then(getComments());
+    .then(() => {
+      postedComments.innerHTML = "";
+      // getComments(); //This is fine in this case with only 1 line of code above... but worth noting that this function is still 'blocking code'.
+    })
+    .then(getComments); // An alternative way to write the above statement. Notice that we are only passing the
 };
 
 // ==================== EVENT HANDLER WHEN SUBMIT BUTTON IS CLICKED ==================== //
