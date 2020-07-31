@@ -51,10 +51,10 @@
   &__comment-area {
     @extend .selected-text-input;
     padding: 10px;
+    height: 100px;
 
     @include tablet {
       min-width: 395px;
-      height: 100px;
     }
     @include desktop {
       min-width: 520px;
