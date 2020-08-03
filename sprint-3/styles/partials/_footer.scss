@@ -7,9 +7,9 @@
   flex-direction: column;
   background-color: #323232;
   color: #ffffff;
-  padding: 7% 3%;
+  padding: 7% 4%;
   @include tablet {
-    padding: 6% 3.7% 4.5%;
+    padding: 4% 3.7% 4.5%;
   }
   @include desktop {
     padding: 3% 10% 1%;
@@ -31,28 +31,40 @@
   }
 
   &__heading {
+    @include desk__h1;
     font-family: "avenir-bold";
-    font-size: 36px;
-    line-height: 44px;
     margin-right: 5%;
-    margin-bottom: auto;
+    margin-bottom: 5px;
+    margin-top: 20px;
+
+    @include tablet {
+      margin-bottom: 4%;
+      margin-right: 6%;
+    }
+
+    @include desktop {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
   }
 
   &__icon-container {
     display: flex;
     align-items: center;
     flex-direction: row;
-    // justify-content: space-around;
     margin-top: 4%;
     margin-bottom: 4%;
     @include tablet {
       margin-top: auto;
       margin-bottom: auto;
     }
+    @include desktop {
+      margin-left: 5px;
+    }
   }
 
   &__icon {
-    margin-right: 2rem;
+    margin-right: 2.5rem;
   }
 
   &__logo {
@@ -60,8 +72,16 @@
     position: absolute;
     right: 0px;
     top: 25%;
+
     @include tablet {
       display: flex;
+      margin-top: 2%;
+      margin-bottom: 0;
+    }
+
+    @include desktop {
+      margin-top: auto;
+      margin-bottom: auto;
     }
   }
 
@@ -76,6 +96,10 @@
     @include tablet {
       flex-direction: row;
       padding-bottom: 1.5%;
+      justify-content: space-between;
+    }
+    @include desktop {
+      justify-content: left;
     }
   }
 
@@ -84,29 +108,35 @@
     margin-bottom: 5%;
 
     @include desktop {
-      margin-right: 1.8rem;
+      margin-right: 2.3rem;
     }
   }
 
   &__contact-regions {
-    font-size: 13px;
-    line-height: 18px;
+    @include mobile__h5;
+    @include tablet {
+      @include desk__h4-list-contact;
+      font-weight: 100;
+    }
   }
 
   &__contact-name-and-organization {
-    font-size: 16px;
-    line-height: 24px;
+    @include mobile__h2;
     font-family: "avenir-demi";
-    // margin-bottom: 1%;
     @include tablet {
-      font-size: 16px;
-      line-height: 24px;
+      @include desk__h3;
     }
   }
 
   &__email {
-    font-size: 13px;
-    line-height: 18px;
+    @include mobile__h5;
+    @include tablet {
+      font-weight: 100;
+      @include mobile__h4-list-contact;
+    }
+    @include desktop {
+      @include desk__h4-list-contact;
+    }
   }
 
   /* ============
@@ -121,9 +151,10 @@
     }
   }
   &__copyright {
-    font-size: 13px;
-    line-height: 18px;
+    @include mobile__h4-list-contact;
     @include tablet {
+      @include desk__h4-list-contact;
+      font-weight: 100;
       margin-top: -5%;
     }
   }

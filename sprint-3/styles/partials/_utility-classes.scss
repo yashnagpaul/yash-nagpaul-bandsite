@@ -3,13 +3,11 @@ UTILITY CLASSES
 ============ */
 
 .section-heading {
-  font-size: 24px;
-  line-height: 32px;
+  @include mobile__h1;
   font-family: "avenir-bold";
   @include tablet {
     margin-left: 0;
-    font-size: 36px;
-    line-height: 44px;
+    @include desk__h1;
   }
 }
 
@@ -26,7 +24,7 @@ UTILITY CLASSES
 
 .selected-text-input {
   background-color: rgba(0, 0, 0, 0.04);
-  border-radius: 2%;
+  border-radius: 5px;
   outline-color: black;
   border: 1.5px solid $mercury;
 }
@@ -35,10 +33,11 @@ UTILITY CLASSES
   border-radius: 5px;
   border: 0px solid;
   background-color: $light-black;
-  color: $mercury;
+  color: $white;
   font-family: "avenir-demi";
   width: 100%;
-  padding: 12px;
+  padding: 16px;
+  font-size: 15px;
   &:hover {
     background-color: black;
   }

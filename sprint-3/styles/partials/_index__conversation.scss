@@ -25,7 +25,7 @@
 
   &__new-comment-image {
     width: 48px;
-    height: 45px;
+    height: 48px;
     border-radius: 50%;
     margin: 17px 20px auto 0px;
   }
@@ -51,7 +51,7 @@
   &__comment-area {
     @extend .selected-text-input;
     padding: 10px;
-    height: 100px;
+    height: 96px;
 
     @include tablet {
       min-width: 395px;
@@ -62,29 +62,29 @@
   }
 
   &__comment {
-    @include mobile__h4-para;
+    @include desk__h4-para;
     display: flex;
     flex-direction: column;
-    @include desktop {
-      @include desk__h3;
-    }
   }
 
   &__form-labels {
     @include mobile__h5;
+    color: $silver;
+    font-family: "avenir-demi";
+    margin-bottom: 8px;
   }
 
   &__button {
     @extend .primary-cta-button;
-    margin: 12px auto 20px;
+    margin: 20px auto 20px;
     @include tablet {
       max-width: 170px;
       float: right;
     }
 
     @include desktop {
-      font-size: 16px;
-      max-width: 200px;
+      font-size: 17px;
+      max-width: 185px;
     }
   }
 
@@ -117,7 +117,7 @@
   }
 
   &__name {
-    @include mobile__h4-para;
+    @include desk__h4-para;
     font-family: "avenir-demi";
     position: relative;
     &::after {
@@ -139,14 +139,11 @@
   }
 
   &__date {
-    @include mobile__h4-para;
+    @include desk__h4-para;
     color: $silver;
     @include tablet {
       @include desk__h4-para;
       margin-left: 15px;
-    }
-    @include desktop {
-      @include desk__h3;
     }
   }
 }

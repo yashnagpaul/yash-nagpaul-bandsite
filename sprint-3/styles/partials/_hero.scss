@@ -7,10 +7,9 @@
   background-position: center;
   background-size: cover;
   width: 100vw;
-  height: 183px;
+  height: 57.2vw; //changed from hardcoded 183px
   display: flex;
   flex-direction: column;
-  // justify-content: center;
   position: relative;
   padding-left: 5%;
   &::after {
@@ -25,12 +24,12 @@
 
   @include tablet {
     padding-left: 3.7%;
-    height: 400px;
+    height: 52.1vw; //changed from hardcoded 400px
   }
   @include desktop {
     flex-direction: row;
     padding-left: 11.5%;
-    height: 670px;
+    height: 46.5vw; //changed from hardcoded 670px
   }
 
   &--bio {
@@ -61,21 +60,20 @@
   }
 
   &__banner-h2 {
-    font-family: "avenir-bold";
+    font-family: "avenir-demi";
     @include mobile__h2;
     @include tablet {
+      font-family: "avenir-bold";
       @include desk__h2;
     }
   }
 
   &__banner-text {
-    font-size: 24px;
-    line-height: 32px;
+    @include mobile__h1;
     font-family: "avenir-bold";
     @include tablet {
-      font-size: 60px;
-      line-height: 68px;
       margin-right: 64px;
+      @include desk__hero-heading;
     }
   }
 
@@ -103,7 +101,7 @@
     }
     @include desktop {
       margin-top: auto;
-      margin-bottom: 16%;
+      margin-bottom: 218px;
     }
   }
 }
