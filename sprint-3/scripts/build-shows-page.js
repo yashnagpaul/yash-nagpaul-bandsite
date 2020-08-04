@@ -73,8 +73,6 @@ axios
 
       // = = = = = = = = = = = = = = = = = = =
 
-      // Finally, before finishing the loop, we tell our code to nest "eachShow" inside the showsTable.
-
       showsTable.appendChild(eachShow);
     }
   });

@@ -59,10 +59,8 @@ pushComment = (newObject) => {
     )
     .then(() => {
       postedComments.innerHTML = "";
-
-      // getComments(); //This would be fine in this case with only 1 line of code above... but worth noting that this way of writing is still 'blocking code'.
     })
-    .then(getComments); // An alternative way to write the above statement. Notice that we are only passing the function as an argument (as opposed to invoking it with brackets()).
+    .then(getComments);
 };
 
 // ==================== EVENT HANDLER WHEN SUBMIT BUTTON IS CLICKED ==================== //
