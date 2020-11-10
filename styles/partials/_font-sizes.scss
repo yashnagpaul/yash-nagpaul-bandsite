@@ -1,0 +1,77 @@
+@mixin desk__hero-heading {
+  font-size: 60px;
+  line-height: 68px;
+}
+
+/* = = = = = = = = = = = = = = =
+= = = = = = = = = = = = = = = */
+
+@mixin desk__h1 {
+  font-size: 36px;
+  line-height: 44px;
+}
+
+@mixin mobile__h1 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+/* = = = = = = = = = = = = = = = 
+= = = = = = = = = = = = = = = */
+
+@mixin desk__h2 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+/* = = = = = = = = = = = = = = = 
+= = = = = = = = = = = = = = = */
+
+@mixin desk__h3 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin mobile__h2 {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+/* = = = = = = = = = = = = = = = 
+= = = = = = = = = = = = = = = */
+
+@mixin desk__h4-para {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+@mixin mobile__h4-para {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* = = = = = = = = = = = = = = = 
+= = = = = = = = = = = = = = = */
+
+@mixin desk__h4-list-contact {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@mixin mobile__h4-list-contact {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* = = = = = = = = = = = = = = = 
+= = = = = = = = = = = = = = = */
+
+@mixin desk__h5 {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+@mixin mobile__h5 {
+  font-size: 12px;
+  line-height: 20px;
+}

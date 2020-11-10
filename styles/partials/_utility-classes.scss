@@ -1,0 +1,44 @@
+/* ============
+UTILITY CLASSES
+============ */
+
+.section-heading {
+  @include mobile__h1;
+  font-family: "avenir-bold";
+  @include tablet {
+    margin-left: 0;
+    @include desk__h1;
+  }
+}
+
+.section-padding {
+  padding: 25px 5% 25px;
+  @include tablet {
+    padding: 5% 3.7% 3%;
+  }
+  @include desktop {
+    padding-left: 11.5%;
+    padding-right: 9.5%;
+  }
+}
+
+.selected-text-input {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 5px;
+  outline-color: black;
+  border: 1.5px solid $mercury;
+}
+
+.primary-cta-button {
+  border-radius: 5px;
+  border: 0px solid;
+  background-color: $light-black;
+  color: $white;
+  font-family: "avenir-demi";
+  width: 100%;
+  padding: 16px;
+  font-size: 15px;
+  &:hover {
+    background-color: black;
+  }
+}

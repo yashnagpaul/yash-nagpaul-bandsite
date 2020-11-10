@@ -1,0 +1,32 @@
+/* ===========
+DEFAULT RESETS
+=========== */
+
+html,
+head,
+body {
+  box-sizing: border-box;
+  margin: -4;
+  color: #323232;
+}
+
+*,
+*::before,
+*::after {
+  font-family: "avenir-regular";
+  margin: inherit;
+  box-sizing: inherit;
+}
+
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
