@@ -67,11 +67,7 @@ axios
       // = = = = = = = = = = = = CREATE A BUTTON = = = = = = = = = = = =
 
       let buyTickets = document.createElement("button");
-      
-      let link = document.createElement('a')
-      link.setAttribute('href', 'https://www.eventbrite.ca/d/online/all-events/');
-      button.appendChild(link);
-      
+      buyTickets.setAttribute('onClick', "location.href='https://www.eventbrite.ca/d/online/all-events/'");
       buyTickets.classList.add("shows-section__buy-button");
       buyTickets.innerText = "BUY TICKETS";
       eachShow.appendChild(buyTickets);
